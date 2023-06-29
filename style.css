@@ -1,0 +1,169 @@
+*{
+    box-sizing: border-box;
+    padding : 0px;
+    margin: 0px;
+
+}
+
+.video-container{
+    height: 100vh;
+    width: 100vw;
+    background:black;
+    border: 2px solid salmon;
+
+
+}
+
+video{
+    position : absolute; 
+    top: 30px;
+    bottom: 30px;
+    height: 93%;
+    width: 100%;
+    /* margin-left: -50%;  */
+    /* object-fit: cover; */
+}
+.controls{
+    position: absolute;
+    top: 13vh;
+    right: 2vw;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 160px;
+    z-index: 3;
+    align-items: center;
+    /* border: 5px solid black; */
+    border: 5px solid white;
+
+}
+.controls > div{
+    width: 60%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid white;
+
+
+}
+#record{
+    /* border: 5px solid black; */
+    border: 5px solid white;
+    border-radius: 50%;
+
+}
+.inner-record{
+    height: 70%;
+    border: 5px solid red;
+    width: 70%;
+    background: red;
+    border-radius: 50%;
+
+
+
+}
+#capture{
+    /* border: 5px solid black; */
+    border-radius: 50%;
+}
+.inner-capture{
+    height: 70%;
+    width: 70%;
+    border: 5px solid white;
+    background: white;
+    border-radius: 50%;
+}
+.animate-record{
+    animation-name: scaleInScaleOut;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+
+
+}
+.animate-capture{
+    animation-name: scaleInScaleOut;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+.video-filters{
+    /* border: 5px solid black; */
+    border: 5px solid white;
+    position: absolute;
+    top: 5vh;
+    left: 10vh;
+    z-index: 3;
+    height: 650px;
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.filter{
+    height: 20%;
+    width: 100%;
+    border: 2px solid green;
+    background-image: url("https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    background-size: cover;
+    background-blend-mode: soft-light;
+}
+.filter-div{
+    position: absolute;
+    top: 0px;   
+    height: 100vh;
+    width: 100vw;
+
+}
+.zoom{
+    flex-direction: column;
+    height: 20%;
+    width: 50%;
+}
+.zoom div{
+    /* border:2px solid  black; */
+    border: 5px solid black;
+    background-color: white;
+    border-radius: 50%;
+
+
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.fa-solid{
+    font-size: 1.5rem;
+   /* font-display: black; */
+   color:black;
+
+}
+.gallery-btn{
+    background: pink;
+    /* background: black; */
+    border-radius: 50%;
+    font-size: 20px ;
+    font-weight: bold;
+    cursor: pointer;
+    /* border: 2px solid black; */
+    border: 5px solid white;
+    
+
+
+}
+@keyframes scaleInScaleOut{
+    0%{
+        transform: scale(1);
+
+    }
+    50%{
+        transform: scale(2.0);
+    }
+    
+    100%{
+        transform: scale(1);
+    }
+}
